@@ -22,7 +22,7 @@ def index(request):
 
 def detail(request, question_id):
     """
-    pybo 내용 출력
+     내용 출력
     """
 
    # question = Question.objects.get(id=question_id)
@@ -33,7 +33,7 @@ def detail(request, question_id):
 @login_required(login_url='common:login')
 def answer_create(request, question_id):
     """
-    pybo 답변등록
+     답변등록
     """
     question = get_object_or_404(Question, pk=question_id)
     if request.method == "POST":
