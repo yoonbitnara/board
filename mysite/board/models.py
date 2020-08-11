@@ -1,6 +1,7 @@
 from django.db                  import models
 from django.contrib.auth.models import User
 
+# 질문
 class Question(models.Model):
     subject     = models.CharField(max_length=200)
     content     = models.TextField()
@@ -10,6 +11,7 @@ class Question(models.Model):
     def __str__(self):
         return self.subject
 
+# 답변
 class Answer(models.Model):
     question    = models.ForeignKey(Question, on_delete=models.CASCADE)
     content     = models.TextField()

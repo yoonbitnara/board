@@ -7,6 +7,9 @@ from django.contrib.auth.decorators import login_required
 from django.contrib        import messages
 
 
+# render는 템플릿을 불러오고 ex)html file
+# redirect는 해당url로 이동. URL 로 이동한다는 건 그 URL 에 맞는 views가 다시 실행될테고 여기서 render 를 할지 다시 redirect 할지 결정할 것.
+
 def index(request):
     """
     목록출력
